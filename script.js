@@ -1,7 +1,7 @@
 let produits = [
 
-{id:1, nom:"Robe rouge élégante", prix:15000, image:"c.png"},
-{id:2, nom:"Sac noir luxe", prix:20000, image:"images/produits/sac-noir.jpg"},
+{id:1, nom:"Robe rouge élégante", prix:15000, image:"ima.jpeg"},
+{id:2, nom:"Sac noir luxe", prix:20000, image:"Ima1.jepg"},
 {id:3, nom:"Chaussure femme chic", prix:18000, image:"images/produits/chaussure.jpg"},
 {id:4, nom:"Robe noire soirée", prix:22000, image:"images/produits/robe-noire.jpg"},
 {id:5, nom:"Sac blanc tendance", prix:17000, image:"images/produits/sac-blanc.jpg"},
