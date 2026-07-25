@@ -1,0 +1,219 @@
+/* PAGE PANIER */
+
+#listePanier{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    padding:30px;
+
+}
+
+
+
+#listePanier .carte-produit{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding-bottom:20px;
+
+    text-align:center;
+
+}
+
+
+
+#listePanier .carte-produit img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:25px 25px 0 0;
+
+}
+
+
+
+#listePanier .carte-produit button{
+
+    background:#ff0080;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+
+#listePanier .carte-produit button:hover{
+
+    background:#ff5500;
+
+}
+
+
+
+
+/* ZONE COMMANDE */
+
+.commande{
+
+    background:white;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    width:90%;
+
+    max-width:600px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+
+
+.commande h2{
+
+    color:#ff0080;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.bouton-commande{
+
+    width:90%;
+
+    max-width:350px;
+
+    padding:20px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ff0080,
+        #ff4d00,
+        #ffd000
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 30px rgba(255,0,128,0.4),
+    inset 0 3px 10px rgba(255,255,255,0.4);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+}
+
+
+
+/* effet brillant */
+
+.bouton-commande::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:70%;
+
+    height:100%;
+
+    background:rgba(255,255,255,0.4);
+
+    transform:skewX(-30deg);
+
+    transition:0.5s;
+
+}
+
+
+
+.bouton-commande:hover::before{
+
+    left:120%;
+
+}
+
+
+
+.bouton-commande:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+    0 15px 40px rgba(255,0,128,0.6);
+
+}
+
+
+
+/* TELEPHONE */
+
+@media(max-width:768px){
+
+    #listePanier{
+
+        grid-template-columns:repeat(2,1fr);
+
+        padding:15px;
+
+    }
+
+
+    #listePanier .carte-produit img{
+
+        height:180px;
+
+    }
+
+
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Commande - CHIC DJASSA</title>
+
+<link rel="stylesheet" href="commande.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        CHIC DJASSA
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">🏠 Accueil</a>
+
+        <a href="historique.html">📦 Historique</a>
+
+        <a href="panier.html">🛒 Panier</a>
+
+    </nav>
+
+
+</header>
+
+
+
+
+
+<section class="banner">
+
+    <h1>Passer votre commande</h1>
+
+    <p>Paiement à la livraison</p>
+
+</section>
+
+
+
+
+
+
+
+<div class="commande-container">
+
+
+
+<h2>Vos articles</h2>
+
+
+<div id="articlesCommande">
+
+</div>
+
+
+
+
+
+
+
+<h2>Informations de livraison</h2>
+
+
+
+
+
+<label for="nom">
+Nom complet
+</label>
+
+<input 
+type="text" 
+id="nom"
+placeholder="Exemple : Jean Kouassi">
+
+
+
+
+
+<label for="telephone">
+Numéro de téléphone
+</label>
+
+<input 
+type="tel" 
+id="telephone"
+placeholder="Exemple : 07 08 09 10 11">
+
+
+
+
+
+
+<label for="ville">
+Ville de livraison
+</label>
+
+
+<select id="ville">
+
+<option value="">
+Choisir votre ville
+</option>
+
+<option value="Abidjan">
+Abidjan
+</option>
+
+<option value="Bouaké">
+Bouaké
+</option>
+
+<option value="Yamoussoukro">
+Yamoussoukro
+</option>
+
+<option value="San Pedro">
+San Pedro
+</option>
+
+<option value="Korhogo">
+Korhogo
+</option>
+
+<option value="Daloa">
+Daloa
+</option>
+
+<option value="Man">
+Man
+</option>
+
+<option value="Gagnoa">
+Gagnoa
+</option>
+
+<option value="Abengourou">
+Abengourou
+</option>
+
+<option value="Grand-Bassam">
+Grand-Bassam
+</option>
+
+<option value="Sassandra">
+Sassandra
+</option>
+
+<option value="Bondoukou">
+Bondoukou
+</option>
+
+<option value="Odienné">
+Odienné
+</option>
+
+</select>
+
+
+
+
+
+
+
+<label for="commune">
+Commune de livraison
+</label>
+
+
+<select id="commune">
+
+
+<option value="">
+Choisir votre commune
+</option>
+
+
+<option value="Adjamé">
+Adjamé
+</option>
+
+
+<option value="Abobo">
+Abobo
+</option>
+
+
+<option value="Attécoubé">
+Attécoubé
+</option>
+
+
+<option value="Cocody">
+Cocody
+</option>
+
+
+<option value="Koumassi">
+Koumassi
+</option>
+
+
+<option value="Marcory">
+Marcory
+</option>
+
+
+<option value="Plateau">
+Plateau
+</option>
+
+
+<option value="Port-Bouët">
+Port-Bouët
+</option>
+
+
+<option value="Treichville">
+Treichville
+</option>
+
+
+<option value="Yopougon">
+Yopougon
+</option>
+
+
+<option value="Bingerville">
+Bingerville
+</option>
+
+
+<option value="Songon">
+Songon
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<label for="adresse">
+Adresse précise de livraison
+</label>
+
+
+<textarea 
+id="adresse"
+placeholder="Exemple : Cocody Angré, à côté de l'hôpital, près de la pharmacie, maison avec portail noir">
+</textarea>
+
+
+
+
+
+
+
+
+
+<div class="resume">
+
+
+<p>
+Prix des articles :
+<span id="prixArticles">0</span> FCFA
+</p>
+
+
+
+<p>
+Livraison :
+<span id="prixLivraison">0</span> FCFA
+</p>
+
+
+
+
+<h2>
+Total :
+<span id="totalCommande">0</span> FCFA
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+
+<button id="confirmerCommande">
+
+✅ Confirmer la commande
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="commande.js"></script>
+
+
+</body>
+
+</html>

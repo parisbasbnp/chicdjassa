@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIC DJASSA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        CHIC DJASSA
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">🏠 Accueil</a>
+
+        <a href="historique.html">📦 Historique</a>
+
+        <a href="panier.html">
+        🛒 Panier (<span id="nombrePanier">0</span>)
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<section class="banner">
+
+    <h1>CHIC DJASSA</h1>
+
+    <p>Votre boutique de mode en ligne</p>
+
+</section>
+
+
+
+
+<div class="recherche">
+
+    <input 
+    type="text" 
+    id="search"
+    placeholder="🔍 Rechercher un article...">
+
+</div>
+
+
+
+
+
+<section id="produits" class="produits">
+
+    <!-- Les 100 cartes produits apparaîtront ici -->
+
+</section>
+
+
+
+
+
+<!-- Fenêtre produit -->
+
+<div id="popup" class="popup">
+
+
+    <div class="popup-content">
+
+
+        <span id="fermer">×</span>
+
+
+        <img id="imageProduit">
+
+
+        <h2 id="nomProduit"></h2>
+
+
+        <p id="prixProduit"></p>
+
+
+        <h3>Choisir la taille</h3>
+
+
+        <div class="tailles">
+
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>XXL</button>
+            <button>XXXL</button>
+
+        </div>
+
+
+
+        <button id="ajouterPanier">
+
+            🛒 Ajouter au panier
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

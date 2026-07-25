@@ -1,0 +1,709 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    background:linear-gradient(
+        45deg,
+        #ff0080,
+        #ff8c00,
+        #ffee00,
+        #00ff85,
+        #00c3ff,
+        #8c00ff
+    );
+
+    background-size:400% 400%;
+
+    animation:arcenciel 12s ease infinite;
+
+    min-height:100vh;
+
+}
+
+
+/* Animation arc-en-ciel */
+
+@keyframes arcenciel{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+
+
+
+/* HEADER */
+
+header{
+
+    background:rgba(0,0,0,0.85);
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+
+
+/* LOGO ARC-EN-CIEL */
+
+.logo{
+
+    font-size:35px;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    background:linear-gradient(
+        90deg,
+        #ff0080,
+        #ffff00,
+        #00ff85,
+        #00c3ff,
+        #8c00ff
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:logoAnime 5s linear infinite;
+
+}
+
+
+@keyframes logoAnime{
+
+    from{
+        filter:hue-rotate(0deg);
+    }
+
+    to{
+        filter:hue-rotate(360deg);
+    }
+
+}
+
+
+
+
+/* MENU */
+
+nav{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    padding:10px 15px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+
+}
+
+
+nav a:hover{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+
+
+/* BANNIERE */
+
+.banner{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:white;
+
+}
+
+
+.banner h1{
+
+    font-size:50px;
+
+    text-shadow:0 0 20px black;
+
+}
+
+
+.banner p{
+
+    font-size:22px;
+
+}
+
+
+
+/* RECHERCHE */
+
+.recherche{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px;
+
+}
+
+
+.recherche input{
+
+    width:600px;
+
+    max-width:90%;
+
+    padding:20px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+
+
+
+
+/* PRODUITS */
+
+.produits{
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+/* CARTE */
+
+.carte-produit{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+    transition:0.4s;
+
+    cursor:pointer;
+
+}
+
+
+.carte-produit:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
+
+
+
+.carte-produit img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+
+
+.carte-produit h3{
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+
+
+.carte-produit p{
+
+    text-align:center;
+
+    color:#ff0080;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    padding-bottom:20px;
+
+}
+
+
+
+
+
+/* POPUP */
+
+.popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:200;
+
+}
+
+
+
+.popup-content{
+
+    background:white;
+
+    width:400px;
+
+    max-width:90%;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+}
+
+
+
+.popup-content img{
+
+    width:250px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+#fermer{
+
+    float:right;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+
+.tailles button{
+
+    padding:10px;
+
+    margin:5px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#111;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+#ajouterPanier{
+
+    margin-top:20px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff0080;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+header{
+
+    padding:15px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+nav a{
+
+    font-size:13px;
+
+    padding:5px;
+
+}
+
+
+.produits{
+
+    grid-template-columns:repeat(2,1fr);
+
+    padding:15px;
+
+    gap:15px;
+
+}
+
+
+.carte-produit img{
+
+    height:180px;
+
+}
+
+
+.banner h1{
+
+    font-size:35px;
+
+}
+
+
+}
+/* PAGE PANIER */
+
+#listePanier{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    padding:30px;
+
+}
+
+
+
+#listePanier .carte-produit{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding-bottom:20px;
+
+    text-align:center;
+
+}
+
+
+
+#listePanier .carte-produit img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:25px 25px 0 0;
+
+}
+
+
+
+#listePanier .carte-produit button{
+
+    background:#ff0080;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+
+#listePanier .carte-produit button:hover{
+
+    background:#ff5500;
+
+}
+
+
+
+
+/* ZONE COMMANDE */
+
+.commande{
+
+    background:white;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    width:90%;
+
+    max-width:600px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+
+
+.commande h2{
+
+    color:#ff0080;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.bouton-commande{
+
+    width:90%;
+
+    max-width:350px;
+
+    padding:20px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ff0080,
+        #ff4d00,
+        #ffd000
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 30px rgba(255,0,128,0.4),
+    inset 0 3px 10px rgba(255,255,255,0.4);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+}
+
+
+
+/* effet brillant */
+
+.bouton-commande::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:70%;
+
+    height:100%;
+
+    background:rgba(255,255,255,0.4);
+
+    transform:skewX(-30deg);
+
+    transition:0.5s;
+
+}
+
+
+
+.bouton-commande:hover::before{
+
+    left:120%;
+
+}
+
+
+
+.bouton-commande:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+    0 15px 40px rgba(255,0,128,0.6);
+
+}
+
+
+
+/* TELEPHONE */
+
+@media(max-width:768px){
+
+    #listePanier{
+
+        grid-template-columns:repeat(2,1fr);
+
+        padding:15px;
+
+    }
+
+
+    #listePanier .carte-produit img{
+
+        height:180px;
+
+    }
+
+
+}
+
+#nombrePanier{
+    color:red;
+    font-weight:bold;
+    background:white;
+    border-radius:50%;
+    padding:3px 8px;
+    font-size:16px;
+}
+        
+     
+                                            
+                                 
+                                                                                        
+                                                          
